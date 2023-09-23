@@ -171,7 +171,6 @@ public class QueryBuilder : IDisposable
 
         var command = connection.CreateCommand();
         command.CommandText = $"INSERT INTO {typeof(T).Name} ({sbN}) VALUES ({sbV})";
-        Console.WriteLine(command.CommandText);
         var reader = command.ExecuteNonQuery();
     }
 
